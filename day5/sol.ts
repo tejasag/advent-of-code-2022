@@ -4,6 +4,7 @@ let def = i
   .split("\n\n")[0]
   .split("\n")
   .map((b) => b.split(""));
+
 def = def[0]
   .map((_, j) => def.map((row) => row[j]))
   .filter(
@@ -20,8 +21,8 @@ def = def[0]
 i.split("\n\n")[1]
   .split("\n")
   .map((a) => a.split(" "))
-  .map((a) => a.filter((b) => !isNaN(parseInt(b))))
-  .map((a) => a.map((b) => parseInt(b)))
+  .map((a) => a.filter(Number))
+  .map((a) => a.map(Number))
   .forEach(
     ([a, b, c]) =>
       // Remove the .reverse() for part 1
