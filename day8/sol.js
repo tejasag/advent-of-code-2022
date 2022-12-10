@@ -1,3 +1,5 @@
+// yes, i know its ugly. no need to rub it in ;-;
+
 let input = await Deno.readTextFile("./input.txt");
 
 input = input
